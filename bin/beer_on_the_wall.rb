@@ -16,7 +16,11 @@ error and exit
 puts "Which verse should I sing of 99 Bottles?"
 verse_number = gets.chomp
 
+if verse_number == ""
+  puts "I need to know how many bottles to sing!"
+else
 verse_number = verse_number.to_i
+
 
 # Sing the song and subtract one bottle
 while verse_number > 2
@@ -29,4 +33,5 @@ end
   else
      puts "1 bottle of beer on the wall, 1 bottle of beer.\nTake one down and pass it around, no bottles of beer on the wall.\n"
      puts "No bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n"
-end
+  end
+  end
