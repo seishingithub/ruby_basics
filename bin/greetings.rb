@@ -1,9 +1,9 @@
-name = "Mike"
+
+
 
 puts "What is your name?"
-puts "Hello #{name}!"
+name = gets.chomp
 
-name = "Jeff"
+name = #{name}
 
-puts "What is your name?"
 puts "Hello #{name}!"
