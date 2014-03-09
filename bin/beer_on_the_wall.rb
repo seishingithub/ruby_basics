@@ -1,0 +1,26 @@
+=begin
+Write a program that prints out verses of "99 bottles of beer
+on the wall", according to the following rules:
+
+* The user must type "sing 88", where 88 is
+any positive number
+* If the user runs the program without typing
+anything, print "I need to know how many bottles to sing!"
+* If the user runs the program and specifies a verse
+with "sing <number>", print all the lines from the song
+starting at that verse
+* If the user types anything but "sing <number>", show an
+error and exit
+=end
+
+puts "Which verse should I sing of 99 Bottles?"
+verse_number = gets.chomp
+
+verse_number = verse_number.to_i
+
+# Sing the song and subtract one bottle
+while verse_number > 1
+  puts "#{verse_number} bottles of beer on the wall, #{verse_number} bottles of beer.\n"
+verse_number -= 1
+puts "Take one down and pass it around, #{verse_number} bottles of beer on the wall.\n"
+end
