@@ -24,29 +24,44 @@ Converting a String to a Fixnum (integer)
 Building a string
 =end
 
-print "Enter a number and I'll show you how to write it as a Roman numeral: "
-number = gets.chomp
-number = number.to_s
+puts "Enter a number and I'll show you how to write it as a Roman numeral: "
+number = Integer(gets.chomp)
 
-case number
-  when "1"
-    puts "I"
-  when "2"
-    puts "II"
-  when "3"
-    puts "III"
-  when "4"
-    puts "IV"
-  when "5"
-    puts "V"
-  when "6"
-    puts "VI"
-  when "7"
-    puts "VII"
-  when "8"
-    puts "VIII"
-  when "9"
-    puts "IX"
-  when "10"
-    puts "X"
+# converts a single digit number to traditional roman numeral
+output = ""
+
+  keys = {
+    1000 => "M",
+    900 => "CM",
+    500 => "D",
+    400 => "CD",
+    100 => "C",
+    90 => "XC",
+    50 => "L",
+    40 => "XL",
+    10 => "X",
+    9 => "IX",
+    5 => "V",
+    4 => "IV",
+    1 => "I"
+  }
+puts keys
+
+while number > 0
+  keys.each do |arab_key, roman_value|
+    if number >= arab_key
+    output = output + roman_value
+    number -= arab_key
+  end
 end
+end
+
+puts output
+
+
+
+
+
+
+
+
