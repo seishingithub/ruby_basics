@@ -30,30 +30,33 @@ number = Integer(gets.chomp)
 # converts a single digit number to traditional roman numeral
 output = ""
 
-  keys = {
-    1000 => "M",
-    900 => "CM",
-    500 => "D",
-    400 => "CD",
-    100 => "C",
-    90 => "XC",
-    50 => "L",
-    40 => "XL",
-    10 => "X",
-    9 => "IX",
-    5 => "V",
-    4 => "IV",
-    1 => "I"
-  }
-puts keys
+keys = {
+  1000 => "M",
+  900 => "CM",
+  500 => "D",
+  400 => "CD",
+  100 => "C",
+  90 => "XC",
+  50 => "L",
+  40 => "XL",
+  10 => "X",
+  9 => "IX",
+  5 => "V",
+  4 => "IV",
+  1 => "I"
+}
+#puts keys
 
 while number > 0
+  do_break = false
   keys.each do |arab_key, roman_value|
     if number >= arab_key
-    output = output + roman_value
-    number -= arab_key
+      output = output + roman_value
+      number -= arab_key
+      do_break = true
+    end
+    break if do_break
   end
-end
 end
 
 puts output
