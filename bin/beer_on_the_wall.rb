@@ -21,6 +21,10 @@ if verse_number == ""
 else
 verse_number = verse_number.to_i
 
+while verse_number < 0
+  verse_number = verse_number.abs
+end
+
 
 # Sing the song and subtract one bottle
 while verse_number > 2
