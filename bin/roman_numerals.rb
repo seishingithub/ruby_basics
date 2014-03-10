@@ -60,10 +60,7 @@ while number > 0
 end
 
 puts output
-
-
-
-
+#this is a comment
 
 
 
