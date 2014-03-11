@@ -38,3 +38,11 @@ describe NumSequence do        # This is the constant
 
   end
 end
+
+describe NumSequence do
+  it "replaces even numbers in the array with the text 'Even'" do
+    high_number = NumSequence.new(8)
+    expected = [1, "Even", 3, "Even", 5, "Even", 7, "Even"]
+    actual = high_number.arrayify
+  end
+end
