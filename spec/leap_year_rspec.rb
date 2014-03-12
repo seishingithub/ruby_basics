@@ -14,4 +14,11 @@ describe LeapYear do
     actual = leap_year.yes?
     expect(actual). to eq expected
   end
+
+  it "calls a method 'yes?' and tells if it's leap year (false)" do
+    not_leap_year = LeapYear.new(1993)
+    expected = false
+    actual = not_leap_year.yes?
+    expect(actual).to eq expected
+  end
 end

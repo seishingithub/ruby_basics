@@ -13,6 +13,8 @@ class LeapYear
     leap = false
     if @year % 4 == 0
       leap = true
+    else
+      leap = false
     end
   end
 end
