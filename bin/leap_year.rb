@@ -10,9 +10,12 @@ class LeapYear
   end
 
   def yes?
-    leap = false
     if @year % 4 == 0
       leap = true
+    elsif @year % 100 == 0 && @year % 400 == 0
+      leap = true
+    elsif @year % 100 == 0 && @year % 400 != 0
+      leap = false
     else
       leap = false
     end

@@ -12,7 +12,7 @@ describe LeapYear do
     leap_year = LeapYear.new(1996)
     expected = true
     actual = leap_year.yes?
-    expect(actual). to eq expected
+    expect(actual).to eq expected
   end
 
   it "calls a method 'yes?' and tells if it's leap year (false)" do
@@ -20,5 +20,12 @@ describe LeapYear do
     expected = false
     actual = not_leap_year.yes?
     expect(actual).to eq expected
+  end
+
+  it "Returns True if Class LeapYear is divisible by 100 & 400" do
+  leap_year = LeapYear.new(2000)
+  expected = true
+  actual = leap_year.yes?
+  expect(actual).to eq expected
   end
 end
